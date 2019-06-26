@@ -50,12 +50,13 @@ table {
 	position: relative;
 	background-color: #feebef;
 	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	min-height: 100vh;
 }
 
 
 /* header */
 header {
-
 	position: relative;
 }
 
@@ -82,12 +83,13 @@ header .logo {
 }
 
 .header_inner .header_popular {
-	border-top: 3px solid transparent;
 	padding: 14px 5px;
 	color: #000000;
 	font-size: 14px;
 	font-weight: 400;
 	margin-right: 30px;
+	border-top: 3px solid #e25a76;
+	font-weight: 500;
 	transition: 0.3s;
 }
 
@@ -95,15 +97,321 @@ header .logo {
 	color: #000000;
 	font-size: 14px;
 	font-weight: 400;
-	padding: 14px 5px;
+	padding: 15px 5px;
 	border-top: 3px solid transparent;
 	transition: 0.3s;
 }
 
-.header_inner .header_popular:hover,
-.header_inner .header_fresher:hover {
-	border-top: 3px solid #e25a76;
+.header_fresher span {
+	padding: 2px 4px;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: 500;
+	border-radius: 2px;
+	background-color: #e25a76;
+}
+
+.header_inner .header_blogs {
+	border-radius: 4px;
+	border: 1px solid rgba(226, 90, 118, 0.28);
+	padding: 7px 14px;
+	margin-top: 10px;
+	margin-left: 40px;
+	color: #e25a76;
+	font-size: 14px;
 	font-weight: 500;
 	transition: 0.3s;
 }
+
+.header_blogs:hover {
+	border: 1px solid rgba(226, 90, 118, 1);
+	transition: 0.3s;
+}
+
+.header_inner .header_search {
+	display: flex;
+	margin-top: 18px;
+	align-items: center;
+	position: relative;
+	padding-left: 25px;
+}
+
+.header_inner .header_search svg {
+	position: absolute;
+	left: 0;
+}
+
+.header_inner .header_search input {
+	border: none;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: 400;
+	outline: none;
+	transition: 0.3s;
+}
+
+.header_search input:focus ~ svg {
+	fill: #e25a76;
+	transition: 0.3s;
+}
+
+
+
+.header_search input::-webkit-input-placeholder {
+	color: #000;
+}
+.header_search input:-ms-input-placeholder {
+	color: #000;
+}
+.header_search input::-ms-input-placeholder {
+	color: #000;
+}
+.header_search input::placeholder {
+	color: #000;
+}
+
+.header_inner .header_write {
+	margin: 10px 40px;
+	padding: 7px 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	border: 1px solid #f5c6cf;
+	background-color: #ffffff;
+	transition: 0.3s;
+	color: #000;
+}
+
+.header_write:hover {
+	border-color: #e25a76;
+	background-color: #e25a76;
+	color: #fff;
+	transition: 0.3s;
+}
+
+.header_inner .header_sign-in {
+	display: flex;
+	align-items: center;
+	margin-top: 17px;
+	color: #000000;
+	font-size: 14px;
+	font-weight: 500;
+	transition: 0.3s;
+}
+
+.header_sign-in svg {
+	margin-right: 10px;
+}
+
+.header_sign-in:hover,
+.header_popular:hover,
+.header_fresher:hover {
+	color: #e25a76;
+	fill: #e25a76;
+	transition: 0.3s;
+}
+
+
 /* content */
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	min-height: calc(100vh - 52px);
+}
+
+section > div {
+	width: 1060px;
+	height: 535px;
+	box-shadow: 0 30px 40px rgba(133, 73, 86, 0.21), 0 0 4px rgba(0, 0, 0, 0.09);
+	position: relative;
+	background-image: url('../img/background.png');
+	background-size: contain;
+	margin-bottom: 15px;
+}
+
+/* start */
+.start .start_img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.start_inner {
+	position: relative;
+	width: 510px;
+	margin-left: 49px;
+	margin-top: 68px;
+}
+
+.start_inner p {
+	display: block;
+	background-color: #e25a76;
+	padding: 6px 14px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	position: absolute;
+	right: 0;
+}
+.start_inner p::after {
+	content: '';
+  position: absolute;
+	right: 0;
+	bottom: -13px;
+	border: 7.5px solid transparent;
+	border-left: 10px solid #ba4961;
+	border-top: 6px solid #ba4961;
+}
+
+.start_inner h1 {
+	padding-top: 28px;
+  padding-right: 10px;
+	color: #000000;
+	font-size: 34px;
+	font-weight: 900;
+	line-height: 40px;
+}
+
+.start_inner h2 {
+	margin-top: 12px;
+	color: #000000;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
+.start .start_button {
+	position: absolute;
+	left: 50px;
+	bottom: 40px;
+	padding: 15px 39px;
+	box-shadow: 0 15px 22px rgba(121, 54, 68, 0.23);
+	border-radius: 2px;
+	background-color: #ffffff;
+	border: 0;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.start_button:hover {
+	box-shadow: 0 15px 22px rgba(121, 54, 68, 0.40);
+	transition: 0.3s;
+}
+
+/* question */
+.question {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 25px;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.question p {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.question h5 {
+	color: #000000;
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 36px;
+	margin: 16px 0 31px;
+}
+
+.question .question_options li {
+	display: block;
+	margin-bottom: 10px;
+	padding: 15px 25px;
+	border-radius: 2px;
+	border: 1px solid #edcdd3;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+  width: fit-content;
+  line-height: 1.2;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.question_options li:hover {
+	box-shadow: 0 5px 12px rgba(121, 54, 68, 0.20);
+	transition: 0.3s;
+}
+
+.answer_option {
+	display: block;
+	margin: 30px 0;
+	padding: 15px 25px;
+	border-radius: 2px;
+	border: 1px solid;
+	background-color: #ffffff;
+	font-size: 16px;
+	font-weight: 400;
+	width: fit-content;
+	line-height: 1.2;
+}
+
+.right {
+	color: #43a457;
+	border-color: #43a457;
+}
+
+.wrong {
+	color: #e25a76;
+	border-color: #e25a76;
+}
+
+.question_answer .answer_text {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+.answer_text span {
+	font-family: Roboto;
+	font-weight: 700;
+}
+
+.answer_text a {
+	color: #00a0f6;
+}
+
+.question_next {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	display: flex;
+	align-items: center;
+	color: #000000;
+	font-size: 20px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 48px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.question_next svg {
+	margin-left: 13px;
+}
+
+.question_next:hover {
+	transition: 0.3s;
+	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.50));
+  filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.50));
+}
+
+.question_next:active {
+	transition: 0.3s;
+	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
+  filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
+}
