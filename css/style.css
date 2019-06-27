@@ -226,7 +226,7 @@ section > div {
 	box-shadow: 0 30px 40px rgba(133, 73, 86, 0.21), 0 0 4px rgba(0, 0, 0, 0.09);
 	position: relative;
 	background-image: url('../img/background.png');
-	background-size: contain;
+	background-size: cover;
 	margin-bottom: 15px;
 }
 
@@ -235,6 +235,10 @@ section > div {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+
+.start_img_small {
+	display: none;
 }
 
 .start_inner {
@@ -381,7 +385,6 @@ section > div {
 }
 
 .answer_text span {
-	font-family: Roboto;
 	font-weight: 700;
 }
 
@@ -510,10 +513,6 @@ section > div {
 	outline: none;
 }
 
-.final .final_again:hover {
-	transition: 0.3s;
-}
-
 .final_again:hover {
 	transition: 0.3s;
 	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.50));
@@ -530,7 +529,100 @@ section > div {
 	margin-left: 9px;
 }
 
-
 .hidden {
 	display: none;
+}
+
+@media (max-width: 1070px) {
+
+	.header_inner {
+    width: calc(90% - 50px);
+	}
+
+	.header_inner .header_popular {
+		margin-right: 20px;
+	}
+
+	.header_inner .header_blogs {
+		margin-left: 25px;
+	}
+
+	.header_inner .header_write {
+		margin: 10px 30px;
+	}
+
+	section > div {
+		width: 100%;
+		min-height: 535px;
+		padding: 20px 0;
+		margin-bottom: 0;
+	}
+
+	.question_next {
+		bottom: 0;
+	}
+
+}
+
+@media (max-width: 878px) {
+
+	header,
+	.start_img_large {
+		display: none;
+	}
+
+	.start_img_small {
+		display: block;
+		height: 100%;
+		object-fit: contain;
+		bottom: auto;
+    width: 100%;
+	}
+
+}
+
+
+@media (max-width: 600px) {
+
+	.start_img_small {
+		height: auto;
+	}
+
+	.start_inner,
+	.final_inner,
+	.question {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* .question h5 {
+		font-size: 22px;
+	}
+
+	.final .final_text {
+		font-size: 28px;
+	} */
+
+	.final_img img {
+		object-fit: contain;
+		width: 100%;
+		opacity: 0.5;
+	}
+
+	.final .final_again {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		bottom: 45px;
+		border: 0;
+		background-color: transparent;
+		color: #000000;
+		font-size: 20px;
+		font-weight: 700;
+		cursor: pointer;
+		transition: 0.3s;
+		outline: none;
+	}
+
 }
