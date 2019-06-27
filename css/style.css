@@ -377,6 +377,10 @@ section > div {
 }
 
 .answer_text span {
+	font-weight: 500;
+}
+
+.answer_text span {
 	font-family: Roboto;
 	font-weight: 700;
 }
@@ -415,6 +419,117 @@ section > div {
 	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
   filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
 }
+
+/* final */
+.final {
+	height: 100%;
+	position: relative;
+}
+
+.final_inner {
+	z-index: 1;
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 28px;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.final .final_img {
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.final .final_point {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.final .final_text {
+	color: #000000;
+	font-size: 36px;
+	font-weight: 900;
+	line-height: 42px;
+	width: 330px;
+	margin: 62px 0 40px;
+}
+
+.final .final_links {
+	display: flex;
+	width: 310px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.final_links li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+	height: 50px;
+	box-shadow: 0 15px 22px rgba(121, 54, 68, 0.23);
+	border-radius: 2px;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+.final_links li a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #4267b2;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.final_links li span {
+	margin-left: 12px;
+}
+
+.final .final_again {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	bottom: 45px;
+	border: 0;
+	background-color: transparent;
+	color: #000000;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.3s;
+	outline: none;
+}
+
+.final .final_again:hover {
+	transition: 0.3s;
+}
+
+.final_again:hover {
+	transition: 0.3s;
+	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.50));
+  filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.50));
+}
+
+.final_again:active {
+	transition: 0.3s;
+	-webkit-filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
+  filter: drop-shadow(0 3px 12px rgba(121, 54, 68, 0.80));
+}
+
+.final_again img {
+	margin-left: 9px;
+}
+
 
 .hidden {
 	display: none;
